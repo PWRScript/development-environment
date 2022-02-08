@@ -71,6 +71,6 @@ ENV LANG=pt_PT.UTF-8 \
     PATH="${OPENVSCODE_SERVER_ROOT}/bin/remote-cli:${PATH}"
 
 # Default exposed port if none is specified
-EXPOSE 3000
+EXPOSE $PORT
 
-ENTRYPOINT [ "/bin/sh", "-c", "exec ${OPENVSCODE_SERVER_ROOT}/bin/openvscode-server --host 0.0.0.0 --without-connection-token \"${@}\"", "--" ]
+ENTRYPOINT [ "/bin/sh", "-c", "exec ${OPENVSCODE_SERVER_ROOT}/bin/openvscode-server --port $PORT --host 0.0.0.0 --without-connection-token \"${@}\"", "--" ]
