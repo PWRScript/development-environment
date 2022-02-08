@@ -36,7 +36,7 @@ RUN if [ -z "${RELEASE_TAG}" ]; then \
     elif [ "${arch}" = "armv7l" ]; then \
         arch="armhf"; \
     fi && \
-    wget https://github.com/${RELEASE_ORG}/openvscode-server/releases/download/${RELEASE_TAG}/${RELEASE_TAG}-linux-${arch}.tar.gz && \
+    wget https://github.com/${RELEASE_ORG}/openvscode-server/releases/download/${RELEASE_TAG}/${RELEASE_TAG}-linux-x64.tar.gz && \
     tar -xzf ${RELEASE_TAG}-linux-${arch}.tar.gz && \
     mv -f ${RELEASE_TAG}-linux-${arch} ${OPENVSCODE_SERVER_ROOT} && \
     cp ${OPENVSCODE_SERVER_ROOT}/bin/remote-cli/openvscode-server ${OPENVSCODE_SERVER_ROOT}/bin/remote-cli/code && \
