@@ -28,7 +28,7 @@ RUN wget https://github.com/${RELEASE_ORG}/openvscode-server/releases/download/$
     tar -xzf ${RELEASE_TAG}-linux-${arch}.tar.gz && \
     mv -f ${RELEASE_TAG}-linux-${arch} ${OPENVSCODE_SERVER_ROOT} && \
     cp ${OPENVSCODE_SERVER_ROOT}/bin/remote-cli/openvscode-server ${OPENVSCODE_SERVER_ROOT}/bin/remote-cli/code && \
-    rm -f ${RELEASE_TAG}-linux-${arch}.tar.gz
+    rm -f ${RELEASE_TAG}-linux-x64.tar.gz
 
 ARG USERNAME=openvscode-server
 ARG USER_UID=1000
