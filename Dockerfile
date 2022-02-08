@@ -25,8 +25,8 @@ ARG OPENVSCODE_SERVER_ROOT="/home/.openvscode-server"
 # Downloading the latest VSC Server release and extracting the release archive
 # Rename `openvscode-server` cli tool to `code` for convenience
 RUN wget https://github.com/${RELEASE_ORG}/openvscode-server/releases/download/${RELEASE_TAG}/${RELEASE_TAG}-linux-x64.tar.gz && \
-    tar -xzf ${RELEASE_TAG}-linux-${arch}.tar.gz && \
-    mv -f ${RELEASE_TAG}-linux-${arch} ${OPENVSCODE_SERVER_ROOT} && \
+    tar -xzf ${RELEASE_TAG}-linux-x64.tar.gz && \
+    mv -f ${RELEASE_TAG}-linux-x64 ${OPENVSCODE_SERVER_ROOT} && \
     cp ${OPENVSCODE_SERVER_ROOT}/bin/remote-cli/openvscode-server ${OPENVSCODE_SERVER_ROOT}/bin/remote-cli/code && \
     rm -f ${RELEASE_TAG}-linux-x64.tar.gz
 
